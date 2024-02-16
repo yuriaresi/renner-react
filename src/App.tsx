@@ -1,21 +1,25 @@
-import { Header } from "./components/Header";
-import { Home } from "./pages/Home";
 import { Provider } from "react-redux";
 import { store } from "./config/store";
-import { Rodape } from "./components/Rodape";
-import { CarrinhoPage } from "./pages/Carrinho";
+import {  RouterProvider } from "react-router-dom";
+import { routes } from "./routes/routes";
 
 function App() {
-    return (
-        <>
-            <Provider store={store}>
-                <Header />
-                {/* <CarrinhoPage /> */}
-                <Home />
-                <Rodape />
-            </Provider>
-        </>
-    );
+  return (
+    <>
+      <Provider store={store}>
+        <RouterProvider router={routes}>
+          
+        </RouterProvider>
+      </Provider>
+    </>
+  );
 }
 
 export default App;
+
+// <Header />
+{
+  /* <CarrinhoPage /> */
+}
+// <Home />
+// <Rodape />
